@@ -25,6 +25,7 @@
 		25D41CB228AC822D0012D3F4 /* CodeSnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D41CB128AC822D0012D3F4 /* CodeSnapViewController.swift */; };
 		25D41CB528AC8C1D0012D3F4 /* CodeSnap2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D41CB428AC8C1D0012D3F4 /* CodeSnap2ViewController.swift */; };
 		25D41CB828AC91080012D3F4 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 25D41CB728AC91080012D3F4 /* Then */; };
+		25E3F2C328ACF06D0065B52D /* KakaoSnapCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E3F2C228ACF06D0065B52D /* KakaoSnapCodeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		25D41CAC28AC71B40012D3F4 /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
 		25D41CB128AC822D0012D3F4 /* CodeSnapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnapViewController.swift; sourceTree = "<group>"; };
 		25D41CB428AC8C1D0012D3F4 /* CodeSnap2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnap2ViewController.swift; sourceTree = "<group>"; };
+		25E3F2C228ACF06D0065B52D /* KakaoSnapCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoSnapCodeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				25D41CAC28AC71B40012D3F4 /* CodeViewController.swift */,
 				25D41CB128AC822D0012D3F4 /* CodeSnapViewController.swift */,
 				25D41CB428AC8C1D0012D3F4 /* CodeSnap2ViewController.swift */,
+				25E3F2C228ACF06D0065B52D /* KakaoSnapCodeViewController.swift */,
 			);
 			path = CodeBase;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				25D41CB228AC822D0012D3F4 /* CodeSnapViewController.swift in Sources */,
 				25BF102328AB40F7007BC395 /* ThirdViewController.swift in Sources */,
 				25D41CAD28AC71B40012D3F4 /* CodeViewController.swift in Sources */,
+				25E3F2C328ACF06D0065B52D /* KakaoSnapCodeViewController.swift in Sources */,
 				25BF102528AB415F007BC395 /* WalkThroughViewController.swift in Sources */,
 				25BF101F28AB3A9B007BC395 /* FirstViewController.swift in Sources */,
 			);
