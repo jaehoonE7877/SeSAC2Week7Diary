@@ -41,10 +41,19 @@
                                     <constraint firstAttribute="height" constant="5" id="bij-6b-2Fr"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xj8-PZ-Bqd">
+                                <rect key="frame" x="334" y="74" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="5Xc-90-a07"/>
+                                    <constraint firstAttribute="height" constant="50" id="8Ft-0l-OPb"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBrownColor"/>
                         <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xj8-PZ-Bqd" secondAttribute="trailing" constant="30" id="6wU-9S-vj2"/>
+                            <constraint firstItem="xj8-PZ-Bqd" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="8GC-a2-rWJ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NLL-rw-gYB" secondAttribute="trailing" constant="30" id="9Bk-ir-Qlh"/>
                             <constraint firstItem="gfx-mu-aUb" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="I1I-EG-Pjb"/>
                             <constraint firstItem="NLL-rw-gYB" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="iDW-iU-Gn0"/>
@@ -54,12 +63,13 @@
                     </view>
                     <connections>
                         <outlet property="blackView" destination="gfx-mu-aUb" id="0Qt-wz-omw"/>
+                        <outlet property="starImageView" destination="xj8-PZ-Bqd" id="Td6-U7-XRJ"/>
                         <outlet property="tutorialLabel" destination="NLL-rw-gYB" id="BWX-Jn-CQs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6" y="108"/>
+            <point key="canvasLocation" x="5.7971014492753632" y="107.8125"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="aC9-O7-zbr">
