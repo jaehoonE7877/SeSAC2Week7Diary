@@ -7,45 +7,51 @@
 
 import UIKit
 import SeSAC2UIFramework
+import SnapKit
+import Then
 
 class ViewController: UIViewController {
 
+    let nameButton = UIButton().then {
+        $0.setTitle("닉네임", for: .normal)
+        $0.backgroundColor = .systemYellow
+    }
     
-    var name = "고래밥"
-    
-    private var age = 22
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configure()
+        
+        nameButton.addTarget(self, action: #selector(nameButtonTapped), for: .touchUpInside)
+        
     }
     
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    @objc
+    func nameButtonTapped() {
         
-        let vc = KakaoSnapCodeViewController()
-        vc.modalPresentationStyle = .overFullScreen
+        let vc = ProfileViewController()
+        vc.saveButtonActionHandler = {
+            guard let nickName = vc.nameTextField.text else { return }
+            self.nameButton.setTitle(nickName, for: .normal)
+        }
+        
+        
         present(vc, animated: true)
         
-        testOpen()
+    }
+    
+    
+    func configure() {
         
-//        showSesacAlert(title: "테스트 얼럿", message: "테스트 메시지", buttonTitle: "변경") { _ in
-//            self.view.backgroundColor = .lightGray
-//        }
+        view.addSubview(nameButton)
         
-//        testInternal()
-//        testFilePrivate()
-//        testPrivate()
-        
-//        let image = UIImage(systemName: "star.fill")!
-//        let shareURL = "https://www.apple.com"
-//        let text = "WWDC What's New!!!"
-//
-//        sesacShowActivityViewController(shareImage: image, shareURL: shareURL, shareText: text)
-        
-        OpenWebView.presentWebViewController(self, url: "https://www.naver.com", transitionStyle: .present)
-        
+        nameButton.snp.makeConstraints { make in
+            make.width.height.equalTo(200)
+            make.center.equalToSuperview()
+        }
         
     }
+
 }
 

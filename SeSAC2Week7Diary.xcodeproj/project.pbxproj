@@ -25,6 +25,8 @@
 		25D41CB228AC822D0012D3F4 /* CodeSnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D41CB128AC822D0012D3F4 /* CodeSnapViewController.swift */; };
 		25D41CB528AC8C1D0012D3F4 /* CodeSnap2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25D41CB428AC8C1D0012D3F4 /* CodeSnap2ViewController.swift */; };
 		25D41CB828AC91080012D3F4 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 25D41CB728AC91080012D3F4 /* Then */; };
+		25E2C6F828ADDF13008F6D08 /* UIViewContorller+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E2C6F728ADDF13008F6D08 /* UIViewContorller+Extension.swift */; };
+		25E2C6FA28ADE606008F6D08 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E2C6F928ADE606008F6D08 /* ProfileViewController.swift */; };
 		25E3F2C328ACF06D0065B52D /* KakaoSnapCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E3F2C228ACF06D0065B52D /* KakaoSnapCodeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +79,8 @@
 		25D41CAC28AC71B40012D3F4 /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
 		25D41CB128AC822D0012D3F4 /* CodeSnapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnapViewController.swift; sourceTree = "<group>"; };
 		25D41CB428AC8C1D0012D3F4 /* CodeSnap2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSnap2ViewController.swift; sourceTree = "<group>"; };
+		25E2C6F728ADDF13008F6D08 /* UIViewContorller+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewContorller+Extension.swift"; sourceTree = "<group>"; };
+		25E2C6F928ADE606008F6D08 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		25E3F2C228ACF06D0065B52D /* KakaoSnapCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoSnapCodeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +119,7 @@
 		25BF0FE428AB1FD3007BC395 /* SeSAC2Week7Diary */ = {
 			isa = PBXGroup;
 			children = (
+				25E2C6F428ADDEEB008F6D08 /* Extension */,
 				25D41CA928AC718E0012D3F4 /* CodeBase */,
 				25BF101828AB3A58007BC395 /* WalkThrough */,
 				25BF0FE528AB1FD3007BC395 /* AppDelegate.swift */,
@@ -124,6 +129,7 @@
 				25BF0FEE28AB1FD4007BC395 /* Assets.xcassets */,
 				25BF0FF028AB1FD4007BC395 /* LaunchScreen.storyboard */,
 				25BF0FF328AB1FD4007BC395 /* Info.plist */,
+				25E2C6F928ADE606008F6D08 /* ProfileViewController.swift */,
 			);
 			path = SeSAC2Week7Diary;
 			sourceTree = "<group>";
@@ -165,6 +171,14 @@
 				25E3F2C228ACF06D0065B52D /* KakaoSnapCodeViewController.swift */,
 			);
 			path = CodeBase;
+			sourceTree = "<group>";
+		};
+		25E2C6F428ADDEEB008F6D08 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				25E2C6F728ADDF13008F6D08 /* UIViewContorller+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,7 +293,9 @@
 				25D41CB228AC822D0012D3F4 /* CodeSnapViewController.swift in Sources */,
 				25BF102328AB40F7007BC395 /* ThirdViewController.swift in Sources */,
 				25D41CAD28AC71B40012D3F4 /* CodeViewController.swift in Sources */,
+				25E2C6F828ADDF13008F6D08 /* UIViewContorller+Extension.swift in Sources */,
 				25E3F2C328ACF06D0065B52D /* KakaoSnapCodeViewController.swift in Sources */,
+				25E2C6FA28ADE606008F6D08 /* ProfileViewController.swift in Sources */,
 				25BF102528AB415F007BC395 /* WalkThroughViewController.swift in Sources */,
 				25BF101F28AB3A9B007BC395 /* FirstViewController.swift in Sources */,
 			);
