@@ -9,6 +9,13 @@ import UIKit
 import SnapKit
 import Then
 
+extension Notification.Name {
+    static let saveButton = NSNotification.Name("saveButtonNotification")
+}
+
+
+
+
 class ProfileViewController: UIViewController {
     
     let saveButton = UIButton().then {
@@ -30,9 +37,12 @@ class ProfileViewController: UIViewController {
         configure()
         
         saveButton.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(saveButtonNotificationObserver(notification:)), name: NSNotification.Name("test"), object: nil)
+        
     }
     
-    var saveButtonActionHandler: (() -> ())?
+    var saveButtonActionHandler: ((String) -> ())?
     
     func configure() {
         [saveButton, nameTextField].forEach { view.addSubview($0) }
@@ -52,13 +62,30 @@ class ProfileViewController: UIViewController {
     @objc
     func saveButtonTapped() {
         
-        //값 전달 기능 실행 => 클로저 구문 활용
-        saveButtonActionHandler?()
+        //1. 클로저 구문 활용
+        //saveButtonActionHandler?(nameTextField.text!)
+        
+        //2. Notification name: 이름 지어주기 user info : 딕셔너리기반으로 전달하고 싶은 데이터 넘겨주기(여러개 가능)
+        NotificationCenter.default.post(name: .saveButton, object: nil, userInfo: ["name": nameTextField.text!, "value" : 123456 ])
         
         //화면 dismiss
         dismiss(animated: true)
     }
     
+    @objc
+    func saveButtonNotificationObserver(notification: NSNotification) {
+        print(#function)
+        // userinfo 가 있는지 옵셔널 체이닝 해주기
+        // userinfo는 any 타입이기 때문에 타입 캐스팅 꼭 필요!
+        if let name = notification.userInfo?["name"] as? String {
+            print(name)
+            self.nameTextField.text = name
+        }
+        
+    }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name("test"), object: nil)
+    }
 
 }
